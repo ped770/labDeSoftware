@@ -19,13 +19,6 @@ def cadastrarMedicos():
         resposta = input("Deseja cadastrar mais algum médico? ").upper()
         print("\n")
 
-    for elemento in medico:
-        print("Nome...........: ", elemento[0])
-        print("CPF............: ", elemento[1])
-        print("RG.............: ", elemento[3])
-        print("CRM............: ", elemento[4])
-        print("Sexo...........: ", elemento[5], "\n")
-
 def buscarMedicos():
     print("\n")
     busca = input("Digite o nome ou o CRM do médico que deseja buscar: ")
@@ -184,4 +177,30 @@ def marcarCompromisso():
                     medico.append(compromisso)
         else:
             print("Médico não encontrado")
-           
+
+def emitirRelatorio():
+    print("Lista de médicos: \n")
+    for elemento in medico:
+        print("Nome...........: ", elemento[0])
+        print("CPF............: ", elemento[1])
+        print("RG.............: ", elemento[2])
+        print("CRM............: ", elemento[3])
+        print("Sexo...........: ", elemento[4])
+        print("Telefone.......: ", elemento[5])
+        print("Endereço.......: ", elemento[6], "\n")
+
+    print("Lista de pacientes: \n")
+    for dado in paciente:
+        print("Nome............: ", dado[0])
+        print("CPF.............: ", dado[1])
+        print("RG..............: ", dado[2])
+        print("Sexo............: ", dado[3])
+        print("Telefone........: ", dado[4])
+        print("Endereço........: ", dado[5], "\n")
+
+    print("Lista de convênios: \n")
+    for element in convenio:
+        print("Nome...........: ", element[0])
+        print("CNPJ...........: ", element[3])
+        print("Telefone.......: ", element[1])
+        print("Endereço.......: ", element[2], "\n")
